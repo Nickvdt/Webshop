@@ -112,10 +112,10 @@ body{
     object-fit: cover;
 }
 
-/* betaalmogelijkheden */
 
+/* Hover effect voor afbeeldingen */
 .product{
-    border-radius:5px;
+    border-radius: 0.5rem;
     transition: 0.2s transform;
 }
 
@@ -123,10 +123,97 @@ body{
     transform: scale(1.05);
 }
 
+/* betaalmogelijkheden */
 .betaal{
     padding-top: 4rem;
+    padding-bottom: 4rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
+
+/* footer */
+footer {
+    background-color: black;
+    padding: 3rem 0;
+    color: white;
+
+  }
+  
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .footer__section {
+    padding: 2rem;
+  }
+  
+  .footer__section div {
+    font-weight: bold;
+  }
+  
+  .footer__section ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 0.2rem;
+  }
+  
+  .footer__section ul li {
+    line-height: 2rem;
+    color: white;
+  }
+  
+  .footer__section ul li a {
+    color: white;
+    text-decoration: none;
+    color: white;
+  }
+  .footer__section ul li a:hover {
+    color: white;
+  }
+
+/* contactform */
+form{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 0.8rem;
+}
+
+form label{
+    border-bottom: 1px solid grey;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+input{
+    display: block;
+    width: 30ch;
+    padding: 1rem 2rem;
+    background: #EEEEEE;
+}
+
+textarea{
+    height: 15ch;
+
+}
+
+.submit{
+    background: grey;
+    font-size: 1.45rem;
+    border: none;
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+
+  
