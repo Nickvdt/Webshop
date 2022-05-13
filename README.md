@@ -1,4 +1,4 @@
-![Logo van SW Games](img/SWGamesLogo.png)
+![Logo van SW Games](img/SWGames%20Zwarte%20versie.png)
 # Webshop naam: SW Games 
 ### Gemaakt door: Nick van der Tol
 ### Klas: SD1D
