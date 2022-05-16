@@ -82,31 +82,31 @@ body{
 
 /*Trending games */
 
-.trending{
+.game{
     padding: 4rem;
 }
 
-.trendingtitel{
+.gametitel{
     color: white;
     font-weight: 40rem;
     margin-bottom: 4rem;
 }
 
-.trendinglijst{
+.gamelijst{
     list-style: none;
     display: flex;
     gap: 4rem;
     flex-wrap: wrap;
 }
 
-.trendinglijstgame{
+.gamelijstitem{
     width: 30rem;
     height: 50rem;
     flex-shrink: 1;
     flex-grow: 1;
 }
 
-.trendinglijstgame > a > img{
+.gamelijstitem > a > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
