@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamepagina</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +18,6 @@
                 <li><a href="index.html">Homepage</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="info.html">Info</a></li>
                 <li><a href="Inloggen.html">Inloggen</a></li>
             </ul>
         </nav>
@@ -34,7 +34,27 @@
         <section class="game">
             <ul class="gamelijst">
                 <li class="gamelijstitem">
-                    <img src="img/games/battlefront2.webp" alt="Wallpaper van Star Wars Battlefront 2" class="product">
+                    <div class="slideshow-container">
+                        <!-- SLIDESHOW -->
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 3</div>
+                          <img src="img/SWBattlefront 2-Gameplay1.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 3</div>
+                          <img src="img/SWBattlefront 2-Gameplay2.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides fade">
+                          <div class="numbertext">3 / 3</div>
+                          <img src="img/SWBattlefront 2-Gameplay3.jpg" style="width:100%">
+                        </div>
+                      
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      </div>
                 </li>
                 <li class="block">
                     <h2>STAR WARS Battlefront II</h2>
@@ -51,8 +71,90 @@
                         DirectX: Versie 11
                         Netwerk: breedbandinternetverbinding
                         Opslagruimte: 60 GB beschikbare ruimte</p>
+                        <span>€ 39,99</span>
                     <button class="glow-on-hover" type="button">Kopen</button>
                 </li>
+        </section>
+        <section class="section section--third">
+            <button class="arrow"><</button>
+            <ul class="reviews">
+                <li class="review">
+                    <figure class="quote">
+                        &#10077
+                    </figure>
+                    <section class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                    </section>
+                    <p>1. Was my most played game on ps4,got it today on steam sale,start over again,looks amazing with my rtx3060 graphics card,still a healthy community which is good to see,excellent stuff. </p>
+                </li>
+                <li class="review">
+                    <figure class="quote">
+                        &#10077
+                    </figure>
+                    <section class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                    </section>
+                    <p>2. Love it. The graphics are amazing, and almost real life. The gameplay and really everything about this game is amazing. The only negative thing I could really think of is ea-missions </p>
+                </li>
+                <li class="review">
+                    <figure class="quote">
+                        &#10077
+                    </figure>
+                    <section class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                    </section>
+                    <p>3. For me as Casual player.. This is One of the best Star games in the series👍. After 600 hours+ playing from Origins. All my progress still save because we must use the Origin to play </p>
+                </li>
+                <li class="review">
+                    <figure class="quote">
+                        &#10077
+                    </figure>
+                    <section class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                    </section>
+                    <p>4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia laboriosam architecto
+                        similique alias esse, quam et consequuntur! Maiores reprehenderit velit perspiciatis illo adipisci
+                        cumque voluptatem aliquid perferendis dolore eum?</p>
+                </li>
+                <li class="review">
+                    <figure class="quote">
+                        &#10077;
+                    </figure>
+                    <section class="stars">
+                        &#9733;
+                        &#9733;
+                    </section>
+                    <p>5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia laboriosam architecto
+                        similique alias esse, quam et consequuntur! Maiores reprehenderit velit perspiciatis illo adipisci
+                        cumque voluptatem aliquid perferendis dolore eum?</p>
+                </li>
+                <li class="review">
+                    <figure class="quote">
+                        &#10077
+                    </figure>
+                    <section class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                    </section>
+                    <p>6. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia laboriosam architecto
+                        similique alias esse, quam et consequuntur! Maiores reprehenderit velit perspiciatis illo adipisci
+                        cumque voluptatem aliquid perferendis dolore eum?</p>
+                </li>
+            </ul>
+            <button class="arrow">></button>
         </section>
     </main>
 
@@ -69,11 +171,9 @@
             <div class="footer__section">
                 <div>Navigatie</div>
                 <ul>
-                    <li><a href="#">Trending</a></li>
-                    <li><a href="info.html">info</a></li>
-                    <li>
-                        <a href="games.html">Games</a>
-                    </li>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="Inloggen.html">Inloggen</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
