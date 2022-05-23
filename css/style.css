@@ -75,6 +75,17 @@ p{
 
 }
 
+.image1 {
+    position: relative;
+    max-width: 100%;
+}
+.image2 {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    width: 50rem;
+}
+
 .afbeelding{
     max-width: 110rem;
     margin: auto;

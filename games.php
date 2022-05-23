@@ -1,3 +1,12 @@
+<?php
+require 'functions.php';
+$connection = dbConnect();
+
+$result = $connection ->query('SELECT * FROM `games`')
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -16,7 +25,7 @@
             <img src="img/LogoSWGames.webp" width="150" alt="Star Wars Games Logo">
         <nav>
             <ul class="links">
-                <li><a href="games.html">Games</a></li>
+                <li><a href="games.php">Games</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="Inloggen.html">Inloggen</a></li>
             </ul>
@@ -25,8 +34,9 @@
 
     <main>
         <section class="afbeelding">
-            <div class="col-2">
-                <img src="img/1087325.webp" alt="Darthvader afbeelding">
+        <div class="col-2">
+                <img src="img/1087325.webp" alt="Darthvader afbeelding" class="image1">
+                <img src="img/Gamepagina.webp" alt="Logo" class="image2"> 
             </div>
         </section>
     </main>
@@ -34,46 +44,17 @@
     <section class="game">
         <h2 class="gametitel">Games</h2>
         <ul class="gamelijst">
-            <li class="gamelijstitem">
-                <a href="battlefront.html">
-                    <img src="img/games/battlefront.webp" alt="Wallpaper van Star Wars Battlefront" class="product">
+
+        <?php foreach($result as $row):?>
+            <li class="gamelijstitem">  
+                <div class="text-block">
+                        <h3>€<?php echo $row['prijs']?></h3>
+                </div>
+                <a href="<?php echo $row['bestandsnaam']?>">
+                    <img src="img/games/<?php echo $row['foto']?>" alt="<?php echo $row['afbeeldinginformatie'] ?>" class="product">
                 </a>
             </li>
-            <li class="gamelijstitem">
-                <a href="battlefront2.html">
-                    <img src="img/games/battlefront2.webp" alt="Wallpaper van Star Wars battlefront 2"class="product">
-                </a>
-            </li>
-            <li class="gamelijstitem">
-                <a href="battlefront-2004.html">
-                    <img src="img/games/battlefront2004.webp" alt="Wallpaper van Star Wars battlefront 2004 versie" class="product">
-                </a>
-            </li>
-            <li class="gamelijstitem">
-                <a href="battlefront2-2005.html">
-                    <img src="img/games/battlefront22005.webp" alt="Wallpaper van Star Wars battlefront 2005 versie" class="product">
-                </a>
-            </li>
-            <li class="gamelijstitem">
-                <a href="jedifallenorder.html">
-                    <img src="img/games/jedifallenorder.webp" alt="Wallpaper van Star Wars jedifallenorder" class="product">
-                </a>
-            </li>
-            <li class="gamelijstitem">
-                <a href="squadrons.html">
-                    <img src="img/games/squadrons.webp" alt="Wallpaper van Star Wars squadrons" class="product">
-                </a>
-            </li>
-            <li class="gamelijstitem">
-                <a href="legostarwars.html">
-                    <img src="img/games/legostarwars.webp" alt="Wallpaper van Lego Star Wars" class="product">
-                </a>
-            </li>
-            <li class="gamelijstitem">
-                <a href="forceunleashed.html">
-                    <img src="img/games/forceunleashed.webp" alt="Wallpaper van Star Wars Force Unleashed" class="product">
-                </a>
-            </li>
+        <?php endforeach; ?>
         </ul>
     </section>
 
@@ -91,7 +72,7 @@
                 <h3>Navigatie</h3>
                 <ul>
                     <li><a href="index.html">Homepage</a></li>
-                    <li><a href="games.html">Games</a></li>
+                    <li><a href="games.php">Games</a></li>
                     <li><a href="Inloggen.html">Inloggen</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
