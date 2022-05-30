@@ -226,6 +226,51 @@ span{ /* prijs */
 
 
 
+/* Filter */
+
+.inputs{
+    padding-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.inputs > div{
+    display: flex;
+    align-items: center;
+    width: 40rem;
+}
+
+.filter{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #eee;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.label{
+    cursor: pointer;
+}
+
+.filter:hover{
+    cursor: pointer;
+}
+
+.filter:checked{
+    background: linear-gradient(#2Fa4FF,#00FFDD);
+}
+
+
+
+
 /* ------------Hover effect voor afbeeldingen------------ */
 .product{
     border-radius: 0.5rem;
