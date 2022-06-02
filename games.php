@@ -26,7 +26,7 @@ $result = $connection->query('SELECT * FROM `games`')
                 <ul class="links">
                     <li><a href="games.php">Games</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="Inloggen.html">Inloggen</a></li>
+                    <li><a href="inloggen.html">Inloggen</a></li>
                 </ul>
             </nav>
     </header>
@@ -86,7 +86,7 @@ $result = $connection->query('SELECT * FROM `games`')
                 <ul>
                     <li><a href="index.html">Homepage</a></li>
                     <li><a href="games.php">Games</a></li>
-                    <li><a href="Inloggen.html">Inloggen</a></li>
+                    <li><a href=inloggen.html">Inloggen</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>

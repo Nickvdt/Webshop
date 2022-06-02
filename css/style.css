@@ -15,8 +15,7 @@ html{
     align-items: center;
     padding: 1rem;
     background-color: black;
-    font-family: myFirstFont;
-    
+    font-family: sans-serif
 }
 
 header > a{
@@ -532,10 +531,3 @@ textarea{
     from {opacity: .4}
     to {opacity: 1}
 }
-
-@font-face {
-    font-family: myFirstFont;
-    src: url(/fonts/Galaxy\ Girl\ Slant.otf);
-}
-
-  
