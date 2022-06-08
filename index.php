@@ -1,3 +1,11 @@
+<?php
+require 'functions.php';
+$connection = dbConnect();
+
+$result = $connection->query('SELECT * FROM `games` LIMIT 4')
+
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -12,7 +20,7 @@
 
 <body>
     <header class="navigatiebar">
-        <a href="index.html">
+        <a href="index.php">
             <img src="img/LogoSWGames.webp" width="150" alt="Star Wars Games Logo">
         </a>
         <nav>
@@ -20,7 +28,7 @@
                 <li><a href="games.php">Games</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="inloggen.html">Inloggen</a></li>
-                <li><a href="zoeken.html">🔎</a></li>
+                <li><a href="zoeken.html">Zoeken</a></li>
             </ul>
         </nav>
     </header>
@@ -33,48 +41,24 @@
             </div>
         </section>
 
-
         <section class="game">
-            <h2 class="gametitel">Trending games</h2>
+            <h2 class="gametitel">Battlefront Games</h2>
             <ul class="gamelijst">
-                <li class="gamelijstitem">
-                    <div class="text-block">
-                        <h3>€39.99</h3>
-                    </div>
-                    <a href="battlefront2.html">
-                        <img src="img/games/battlefront2.webp" alt="Wallpaper van Star Wars Battlefront 2" class="product">
-                    </a>
-                </li>
-                <li class="gamelijstitem">
-                    <div class="text-block">
-                        <h3>€39.99</h3>
-                    </div>
-                    <a href="jedifallenorder.html">
-                        <img src="img/games/jedifallenorder.webp" alt="Wallpaper van Star WarsJedi Fallen Order"
-                            class="product">
-                    </a>
-                </li>
-                <li class="gamelijstitem">
-                    <div class="text-block">
-                        <h3>€49.99</h3>
-                    </div>
-                    <a href="legostarwars.html">
-                        <img src="img/games/legostarwars.webp" alt="Wallpaper van Star Wars Squadrons" class="product">
-                    </a>
-                </li>
-                <li class="gamelijstitem">
-                    <div class="text-block">
-                        <h3>€39.99</h3>
-                    </div>
-                    <a href="squadrons.html">
-                        <img src="img/games/squadrons.webp" alt="Wallpaper van  Lego Star Wars The Skywalker Saga" class="product">
-                    </a>
-                </li>
+            <?php foreach ($result as $row) : ?>
+                    <li class="gamelijstitem" data-category="<?php echo $row['categorie']?>">
+                        <div class="text-block">
+                            <h3>€<?php echo $row['prijs'] ?></h3>
+                        </div>
+                        <a href="game.php?id=<?php echo $row['id'] ?>">
+                            <img src="img/games/<?php echo $row['foto'] ?>" alt="<?php echo $row['afbeeldinginformatie'] ?>" class="product">
+                        </a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </section>
 
         <figure>
-            <img class="betaal" src="img/betaalmethode-2.x65376.png" alt="">
+            <img class="betaal" src="img/betaalmethode-2.x65376.png" alt="afbeelding van Betaalingmogelijkheden">
         </figure>
     </main>
 
@@ -92,7 +76,7 @@
             <div class="footer__section">
                 <h3>Navigatie</h3>
                 <ul>
-                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="index.php">Homepage</a></li>
                     <li><a href="games.php">Games</a></li>
                     <li><a href="inloggen.html">Inloggen</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -102,16 +86,16 @@
                 <h3>Algemeen</h3>
                 <ul>
                     <li>
-                        <a href="">Algemene voorwaarden</a>
+                        <a href="algemene_voorwaarden.html">Algemene voorwaarden</a>
                     </li>
                     <li>
-                        <a href="">Privacybeleid</a>
+                        <a href="privacybeleid.html">Privacybeleid</a>
                     </li>
                     <li>
-                        <a href="">Cookiebeleid</a>
+                        <a href="cookiebeleid.html">Cookiebeleid</a>
                     </li>
                     <li>
-                        <a href="">Herroepingsrecht</a>
+                        <a href="retourbeleid.html">Retourbeleid</a>
                     </li>
                 </ul>
             </div>

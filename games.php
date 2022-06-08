@@ -20,13 +20,15 @@ $result = $connection->query('SELECT * FROM `games`')
 
 <body>
     <header class="navigatiebar">
-        <a href="index.html">
+        <a href="index.php">
             <img src="img/LogoSWGames.webp" width="150" alt="Star Wars Games Logo">
+        </a>
             <nav>
                 <ul class="links">
                     <li><a href="games.php">Games</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="inloggen.html">Inloggen</a></li>
+                    <li><a href="zoeken.html">Zoeken</a></li>
                 </ul>
             </nav>
     </header>
@@ -63,7 +65,7 @@ $result = $connection->query('SELECT * FROM `games`')
                         <div class="text-block">
                             <h3>€<?php echo $row['prijs'] ?></h3>
                         </div>
-                        <a href="<?php echo $row['bestandsnaam'] ?>">
+                        <a href="game.php?id=<?php echo $row['id'] ?>">
                             <img src="img/games/<?php echo $row['foto'] ?>" alt="<?php echo $row['afbeeldinginformatie'] ?>" class="product">
                         </a>
                     </li>
@@ -84,9 +86,9 @@ $result = $connection->query('SELECT * FROM `games`')
             <div class="footer__section">
                 <h3>Navigatie</h3>
                 <ul>
-                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="index.php">Homepage</a></li>
                     <li><a href="games.php">Games</a></li>
-                    <li><a href=inloggen.html">Inloggen</a></li>
+                    <li><a href="inloggen.html">Inloggen</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -94,16 +96,16 @@ $result = $connection->query('SELECT * FROM `games`')
                 <h3>Algemeen</h3>
                 <ul>
                     <li>
-                        <a href="">Algemene voorwaarden</a>
+                        <a href="algemene_voorwaarden.html">Algemene voorwaarden</a>
                     </li>
                     <li>
-                        <a href="">Privacybeleid</a>
+                        <a href="privacybeleid.html">Privacybeleid</a>
                     </li>
                     <li>
-                        <a href="">Cookiebeleid</a>
+                        <a href="cookiebeleid.html">Cookiebeleid</a>
                     </li>
                     <li>
-                        <a href="">Herroepingsrecht</a>
+                        <a href="retourbeleid.html">Retourbeleid</a>
                     </li>
                 </ul>
             </div>
