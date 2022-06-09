@@ -86,12 +86,13 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                 <li class="block">
                     <h2>
                         <?php echo $games['titel'];?>
+                        <a href="scrollingtekst.php?id=<?php echo $games['id'] ?>">🌌</a>
                     </h2>
                     <h5>
                         OVER DIT SPEL
                     </h5>
                     <p>
-                        <?php echo $games['beschrijving'];?>
+                        <?php echo $games['beschrijving'];?> 
                     </p>
                     <h5>
                         SYSTEEMEISEN
@@ -103,6 +104,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         €<?php echo $games['prijs'];?>
                     </span>
                     <button class="glow-on-hover" type="button">Kopen</button>
+                    
                 </li>
         </section>
         <section class="section section--third">
@@ -117,7 +119,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         &#9733;
                         &#9733;
                     </section>
-                    <p>1. Was my most played game on ps4,got it today on steam sale,start over again,looks amazing with my rtx3060 graphics card,still a healthy community which is good to see,excellent stuff. </p>
+                    <p><?php echo $games['review1'];?></p>
                 </li>
                 <li class="review">
                     <figure class="quote">
@@ -129,7 +131,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         &#9733;
                         &#9733;
                     </section>
-                    <p>2. Love it. The graphics are amazing, and almost real life. The gameplay and really everything about this game is amazing. The only negative thing I could really think of is ea-missions </p>
+                    <p><?php echo $games['review2'];?></p>
                 </li>
                 <li class="review">
                     <figure class="quote">
@@ -140,7 +142,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         &#9733;
                         &#9733;
                     </section>
-                    <p>3. co-op lets me pretend like i'm actually good at shooters                                                                                                                                </p>
+                    <p><?php echo $games['review3'];?></p>
                 </li>
                 <li class="review">
                     <figure class="quote">
@@ -152,7 +154,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         &#9733;
                         &#9733;
                     </section>
-                    <p>4. Even five years after launch, after its been abandoned by EA, and hackers took over the lobbies this game keeps a playerbase. Now the lobbies are fixed, wait times are short. buy it!  </p>
+                    <p><?php echo $games['review4'];?></p>
                 </li>
                 <li class="review">
                     <figure class="quote">
@@ -165,7 +167,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         &#9733;
                         &#9733;
                     </section>
-                    <p>5. this is where the fun begins                                                                                                                                                             </p>
+                    <p><?php echo $games['review5'];?></p>
                 </li>
                 <li class="review">
                     <figure class="quote">
@@ -177,7 +179,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         &#9733;
                         &#9733;
                     </section>
-                    <p>6. Anakin bananakin 🍌                                                                                                                                                                       </p>
+                    <p><?php echo $games['review6'];?></p>
                 </li>
             </ul>
             <button class="arrow">></button>
@@ -191,7 +193,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                 <ul>
                     <li>Contactweg 36</li>
                     <li>1014 AN Amsterdam</li>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9739.458184559553!2d4.8560905!3d52.3910058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5dffd675d740eddb!2sMediacollege%20Amsterdam!5e0!3m2!1snl!2snl!4v1652688761811!5m2!1snl!2snl" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9739.458184559553!2d4.8560905!3d52.3910058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5dffd675d740eddb!2sMediacollege%20Amsterdam!5e0!3m2!1snl!2snl!4v1652688761811!5m2!1snl!2snl" width="350" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
                 </ul>
             </div>
             <div class="footer__section">
