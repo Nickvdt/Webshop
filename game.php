@@ -59,7 +59,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
 
         <section class="game">
             <ul class="gamelijst">
-                <li class="gamelijstitem">
+                <li class="gamelijstslider">
                     <div class="slideshow-container">
 
                         <!-- SLIDESHOW -->

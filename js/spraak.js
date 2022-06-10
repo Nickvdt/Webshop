@@ -52,30 +52,29 @@ actionSpeech = (speechText) => {
       break;
     // Alle Games
     case "battlefront":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("http://localhost/SWGames/webshop/game.php?id=1");
       break;
     case "battlefront 2":
       window.open("http://localhost/SWGames/webshop/game.php?id=2");
       break;
     case "battlefront 2004":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("http://localhost/SWGames/webshop/game.php?id=3");
       break;
     case "battlefront 2 2005":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("http://localhost/SWGames/webshop/game.php?id=4");
       break;
     case "Jedi Fallen Order":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("http://localhost/SWGames/webshop/game.php?id=5");
       break;
     case "Lego Star Wars":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("http://localhost/SWGames/webshop/game.php?id=6");
       break;
     case "Squadrons":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("http://localhost/SWGames/webshop/game.php?id=7");
       break;
     case "Force Unleashed":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("http://localhost/SWGames/webshop/game.php?id=8");
       break;
-
 
     case "help me":
       alert("Valid speech commands: Star Wars,  Nick, Reset, battlefront (2004), battlefront 2 (2005), Jedi Fallen Order, Lego Star Wars, Squadrons, Force Unleashed ");
