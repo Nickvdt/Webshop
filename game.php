@@ -42,9 +42,9 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
             <nav>
                 <ul class="links">
                     <li><a href="games.php">Games</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="inloggen.html">Inloggen</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="zoeken.html">Zoeken</a></li>
+                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
                 </ul>
             </nav>
     </header>
@@ -201,8 +201,8 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
                     <li><a href="games.php">Games</a></li>
-                    <li><a href="inloggen.html">Inloggen</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
                 </ul>
             </div>
             <div class="footer__section">
@@ -224,7 +224,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
             </div>
             <div class="footer__section">
                 <h3>Contact formulier</h3>
-                <form>
+                <form class="footer__form">
                     <div>
                         <label for="naam">Naam</label>
                         <input id="naam" type="text">

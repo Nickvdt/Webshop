@@ -25,9 +25,9 @@ $result = $connection->query('SELECT * FROM `games`')
             <nav>
                 <ul class="links">
                     <li><a href="games.php">Games</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="inloggen.html">Inloggen</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="zoeken.html">Zoeken</a></li>
+                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
                 </ul>
             </nav>
     </header>
@@ -87,8 +87,8 @@ $result = $connection->query('SELECT * FROM `games`')
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
                     <li><a href="games.php">Games</a></li>
-                    <li><a href="inloggen.html">Inloggen</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
                 </ul>
             </div>
             <div class="footer__section">
@@ -110,7 +110,7 @@ $result = $connection->query('SELECT * FROM `games`')
             </div>
             <div class="footer__section">
                 <h3>Contact formulier</h3>
-                <form>
+                <form class="footer__form">
                     <div>
                         <label for="naam">Naam</label>
                         <input id="naam" type="text">

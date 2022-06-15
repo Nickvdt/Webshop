@@ -1,3 +1,17 @@
+<?php
+require 'functions.php';
+$connection = dbConnect();
+
+
+
+// Checken of er gegevens zijn opgestuurd
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    //gegevens tonen
+    print_r($_POST);
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -18,9 +32,9 @@
         <nav>
             <ul class="links">
                 <li><a href="games.php">Games</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="inloggen.html">Inloggen</a></li>
+                <li><a href="contact.php">Contact</a></li>
                 <li><a href="zoeken.html">Zoeken</a></li>
+                <li><a href="winkelmandje.html">Winkelmandje</a></li>
             </ul>
         </nav>
     </header>
@@ -32,8 +46,33 @@
                 <img src="img/Contact.webp" alt="Logo" class="image2">
             </div>
         </section>
+
+        <section class="contact">
+            <ul class="contactlijst">
+                <li class="contactlijstitem">
+                    <img src="img/contactformulier.webp" alt="afbeelding van contactformulier">
+                </li>
+                <li class="block">
+                    <form action="contact.php" method="POST">
+                        <div class="form__field">
+                            <label for="naam">Naam</label>
+                            <input type="text" id="naam" name="naam" placeholder="Vul uw naam in" required>
+                        </div>
+                        <div class="form__field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Vul uw emailadres in" required>
+                        </div>
+                        <div class="form__field">
+                            <label for="bericht">Bericht</label>
+                            <textarea name="bericht" id="bericht" placeholder="Vul uw vraag of opmerking in" required></textarea>
+                        </div>
+
+                        <button type="submit" class="form__button">opsturen</button>
+                    </form>
+                </li>
+        </section>
     </main>
-    
+
     <footer>
         <div class="container">
             <div class="footer__section">
@@ -49,8 +88,8 @@
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
                     <li><a href="games.php">Games</a></li>
-                    <li><a href="inloggen.html">Inloggen</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
                 </ul>
             </div>
             <div class="footer__section">
@@ -72,7 +111,7 @@
             </div>
             <div class="footer__section">
                 <h3>Contact formulier</h3>
-                <form>
+                <form class="footer__form">
                     <div>
                         <label for="naam">Naam</label>
                         <input id="naam" type="text">

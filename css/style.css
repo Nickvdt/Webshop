@@ -106,7 +106,7 @@ body{
 
 /*Trending games */
 
-.game{
+.game, .contact{
     padding: 5rem;
 }
 
@@ -116,14 +116,14 @@ body{
     margin-bottom: 4rem;
 }
 
-.gamelijst{
+.gamelijst, .contactlijst{
     list-style: none;
     display: flex;
     gap: 4rem;
     flex-wrap: wrap;
 }
 
-.gamelijstitem, .gamelijstslider{
+.gamelijstitem, .gamelijstslider, .contactlijstitem{
     width: 30rem;
     height: 50rem;
     flex-shrink: 1;
@@ -500,8 +500,102 @@ footer {
   .footer__section > ul iframe{
       padding-top: 1rem;
   }
+/* ------------footer------------ */
+footer {
+    background-color: black;
+    padding: 3rem 0;
+    color: white;
+  }
+  
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .footer__section {
+    padding: 2rem;
+  }
+  
+  .footer__section div {
+    font-weight: bold;
+  }
+  
+  .footer__section ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 0.2rem;
+  }
+  
+  .footer__section ul li {
+    line-height: 2rem;
+    color: white;
+  }
+  
+  .footer__section ul li a {
+    color: white;
+    text-decoration: none;
+    
+  }
+  .footer__section ul li a:hover {
+    color: lightblue;
+  }
+
+  .footer__section > ul iframe{
+      padding-top: 1rem;
+  }
 /* ------------contactform------------ */
-form{
+
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.form__field > div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form__field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form__field input{
+    display: block;
+    width: 40ch;
+    padding: 1rem 2rem;
+    background: #EEEEEE;
+    border-radius: 1rem;
+    
+}
+.form__field textarea {
+    height: 25ch;
+    width: 40ch;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.form__button {
+    width: 40ch;
+    height: 3rem;
+    background: linear-gradient(#2Fa4FF,#00FFDD);
+    color: white;
+    border-radius: 1rem;
+}
+
+.contactlijstitem > img{
+    width: 100%;
+    height: 70%;
+    object-fit:scale-down
+}
+
+/* --- footerform --- */
+.footer__form{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -509,28 +603,29 @@ form{
     gap: 0.8rem;
 }
 
-form label{
+.footer__form > div > label{
     border-bottom: 1px solid grey;
 }
 
-form div{
+.footer__form > div{
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
 }
 
-input{
+.footer__form > div > input{
     display: block;
     width: 30ch;
     padding: 1rem 2rem;
     background: #EEEEEE;
 }
 
-textarea{
+.footer__form > div > textarea{
     height: 15ch;
 }
 
 .submit{
+    height: 3rem;
     background: grey;
     font-size: 1.45rem;
     border: none;
@@ -582,7 +677,6 @@ textarea{
     textarea{
         width: 60vw;
     }
-    
 }
 
 @media screen and (max-width: 74rem) { /* 740px */
