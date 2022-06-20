@@ -1,10 +1,3 @@
-<?php
-require 'functions.php';
-$connection = dbConnect();
-
-$result = $connection->query('SELECT * FROM `games`')
-
-?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -12,9 +5,9 @@ $result = $connection->query('SELECT * FROM `games`')
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamepagina</title>
+    <title>Zoeken</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/filter.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -22,55 +15,26 @@ $result = $connection->query('SELECT * FROM `games`')
         <a href="index.php">
             <img src="img/LogoSWGames.webp" width="150" alt="Star Wars Games Logo">
         </a>
-            <nav>
-                <ul class="links">
-                    <li><a href="games.php#games">Games</a></li>
-                    <li><a href="contact.php#contact">Contact</a></li>
-                    <li><a href="zoeken.php">Zoeken</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul class="links">
+                <li><a href="games.php#games">Games</a></li>
+                <li><a href="contact.php#contact">Contact</a></li>
+                <li><a href="zoeken.php">Zoeken</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="afbeelding">
-            <div class="col-2">
-                <img src="img/1087325.webp" alt="Darthvader afbeelding" class="image1">
-                <img src="img/Gamepagina.webp" alt="Logo" class="image2">
-            </div>
-        </section>
-
-        <section class="inputs"> 
-            <div>
-                <input id="checkbox-classics" type="checkbox" class="filter">
-                <label for="checkbox-classics" class="label">Classics</label>
-            </div>
-            <div>
-                <input id="checkbox-special" type="checkbox" class="filter">
-                <label for="checkbox-special" class="label">Special Edition</label>
-            </div>
-            <div>
-                <input id="checkbox-puzzle" type="checkbox" class="filter">
-                <label for="checkbox-puzzle" class="label">Puzzle</label>
-            </div>
-        </section>
-
-        <section id="games" class="game">
-            <h2 class="gametitel">Games</h2>
-            <ul class="gamelijst">
-
-                <?php foreach ($result as $row) : ?>
-                    <li class="gamelijstitem" data-category="<?php echo $row['categorie']?>">
-                        <div class="text-block">
-                            <h3>€<?php echo $row['prijs'] ?></h3>
-                        </div>
-                        <a href="game.php?id=<?php echo $row['id'] ?>">
-                            <img src="img/games/<?php echo $row['foto'] ?>" alt="<?php echo $row['afbeeldinginformatie'] ?>" class="product">
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </section>
+        <div class="spraakContainer">
+            <img src="img/zoeken.webp" width="600rem" alt="Star Wars Games Logo">
+            <h2>Speech to Text</h2>
+            <h4 id="message">Press the button below, and start speaking</h4>
+            <button class="spraakButton" onclick="startRecognition()">Speech to text</button>
+            <div id="result" class="hide"></div>
+            <div><img id="image1" class="hide"></div>
+        </div>
     </main>
+    
     <footer>
         <div class="container">
             <div class="footer__section">

@@ -17,22 +17,18 @@
         </a>
         <nav>
             <ul class="links">
-                <li><a href="games.php">Games</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="zoeken.html">Zoeken</a></li>
-                <li><a href="winkelmandje.html">Winkelmandje</a></li>
+                <li><a href="games.php#games">Games</a></li>
+                <li><a href="contact.php#contact">Contact</a></li>
+                <li><a href="zoeken.php">Zoeken</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="spraakContainer">
-            <img src="img/zoeken.webp" width="600rem" alt="Star Wars Games Logo">
-            <h2>Speech to Text</h2>
-            <h4 id="message">Press the button below, and start speaking</h4>
-            <button class="spraakButton" onclick="startRecognition()">Speech to text</button>
-            <div id="result" class="hide"></div>
-            <div><img id="image1" class="hide"></div>
+        <div class="bedanktContainer">
+            <img src="img/bedankt.webp" width="600rem" alt="Bedanktformulier afbeelding">
+
+            <a href="/index.php">Klik hier om naar de homepage te gaan.</a>
         </div>
     </main>
     
@@ -50,9 +46,9 @@
                 <h3>Navigatie</h3>
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
-                    <li><a href="games.php">Games</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
+                    <li><a href="games.php#games">Games</a></li>
+                    <li><a href="contact.php#contact">Contact</a></li>
+                    <li><a href="zoeken.php">Zoeken</a></li>
                 </ul>
             </div>
             <div class="footer__section">
@@ -72,24 +68,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__section">
-                <h3>Contact formulier</h3>
-                <form class="footer__form">
-                    <div>
-                        <label for="naam">Naam</label>
-                        <input id="naam" type="text">
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="email">
-                    </div>
-                    <div>
-                        <label for="vraag">vraag / opmerking</label>
-                        <textarea id="vraag" class="bigText"></textarea>
-                    </div>
-                    <input class="submit" type="submit" value="Verzenden">
-                </form>
-            </div>
+
         </div>
     </footer>
 </body>

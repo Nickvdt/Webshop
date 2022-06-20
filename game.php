@@ -41,10 +41,9 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
         </a>
             <nav>
                 <ul class="links">
-                    <li><a href="games.php">Games</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="zoeken.html">Zoeken</a></li>
-                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
+                    <li><a href="games.php#games">Games</a></li>
+                    <li><a href="contact.php#contact">Contact</a></li>
+                    <li><a href="zoeken.php">Zoeken</a></li>
                 </ul>
             </nav>
     </header>
@@ -88,22 +87,22 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         <?php echo $games['titel'];?>
                         <a href="scrollingtekst.php?id=<?php echo $games['id'] ?>">🌌</a>
                     </h2>
-                    <h5>
-                        OVER DIT SPEL
-                    </h5>
+                    <h3>
+                        Over dit spel
+                    </h3>
                     <p>
                         <?php echo $games['beschrijving'];?> 
                     </p>
-                    <h5>
-                        SYSTEEMEISEN
-                    </h5>
+                    <h3>
+                        Systeemeisen
+                    </h3>
                     <p>
                         <?php echo $games['systeemeisen'];?>
                     </p>
                     <span>
                         €<?php echo $games['prijs'];?>
                     </span>
-                    <button class="glow-on-hover" type="button">Kopen</button>
+                    <button class="glow-on-hover" type="button"><h2>Kopen</h2></button>
                     
                 </li>
         </section>
@@ -200,9 +199,9 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                 <h3>Navigatie</h3>
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
-                    <li><a href="games.php">Games</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
+                    <li><a href="games.php#games">Games</a></li>
+                    <li><a href="contact.php#contact">Contact</a></li>
+                    <li><a href="zoeken.php">Zoeken</a></li>
                 </ul>
             </div>
             <div class="footer__section">

@@ -2,7 +2,54 @@
 require 'functions.php';
 $connection = dbConnect();
 
-$result = $connection->query('SELECT * FROM `games` LIMIT 4')
+$result = $connection->query('SELECT * FROM `games` LIMIT 4');
+
+$naam = '';
+$email = '';
+$bericht = '';
+
+
+//opslag variabele (array) voor errors
+$errors = [];
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    //gegevens opslaan
+    $naam = $_POST['naam'];
+    $email = $_POST['email'];
+    $bericht = $_POST['bericht'];
+    $tijdstip = date('Y-m-d H:i:s');
+
+
+    //fouten controleren / valideren van input
+    if (isEmpty($naam)) {
+        $errors['naam'] = 'Vul uw naam in aub.';
+    }
+    if (!isvalidEmail($email)) {
+        $errors['email'] = 'Dit is geen geldig email adres.';
+    }
+    if (!hasMinLength($bericht, 5)) {
+        $errors['bericht'] = 'vul minimaal 5 tekens in.';
+    }
+
+    //print_r($errors);
+
+    if (count($errors) == 0) {
+        $sql = "INSERT INTO `berichten` (`naam`, `email`, `bericht`, `tijdstip`) 
+            VALUES (:naam, :email, :bericht, :tijdstip);";
+        $statement = $connection->prepare($sql);
+        $params = [
+            'naam' => $naam,
+            'email' => $email,
+            'bericht' => $bericht,
+            'tijdstip' => $tijdstip
+        ];
+        $statement->execute($params);
+        
+        //stuur bezoeker door naar bedankt pagina
+        header('location: bedankt.php');
+        exit;
+    }
+}
 
 ?>
 
@@ -13,6 +60,7 @@ $result = $connection->query('SELECT * FROM `games` LIMIT 4')
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beschrijving">
     <title>SW Games</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -25,10 +73,9 @@ $result = $connection->query('SELECT * FROM `games` LIMIT 4')
         </a>
         <nav>
             <ul class="links">
-                <li><a href="games.php">Games</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="zoeken.html">Zoeken</a></li>
-                <li><a href="winkelmandje.html">Winkelmandje</a></li>
+                <li><a href="games.php#games">Games</a></li>
+                <li><a href="contact.php#contact">Contact</a></li>
+                <li><a href="zoeken.php">Zoeken</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +84,7 @@ $result = $connection->query('SELECT * FROM `games` LIMIT 4')
         <section class="afbeelding">
             <div class="col-2">
                 <img src="img/1087325.webp" alt="Darthvader afbeelding" class="image1">
-                <img src="img/Homepage.webp" alt="Logo" class="image2"> 
+                <img src="img/Homepage.webp" alt="Logo" class="image2">
             </div>
         </section>
 
@@ -77,9 +124,9 @@ $result = $connection->query('SELECT * FROM `games` LIMIT 4')
                 <h3>Navigatie</h3>
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
-                    <li><a href="games.php">Games</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
+                    <li><a href="games.php#games">Games</a></li>
+                    <li><a href="contact.php#contact">Contact</a></li>
+                    <li><a href="zoeken.php">Zoeken</a></li>
                 </ul>
             </div>
             <div class="footer__section">
@@ -99,20 +146,34 @@ $result = $connection->query('SELECT * FROM `games` LIMIT 4')
                     </li>
                 </ul>
             </div>
-            <div class="footer__section">
+            <div action="contact.php" method="POST" novalidate class="footer__section">
                 <h3>Contact formulier</h3>
-                <form class="footer__form">
+                <form class="footer__form" novalidate>
                     <div>
                         <label for="naam">Naam</label>
-                        <input id="naam" type="text">
+                        <input id="naam" type="text" name="naam" placeholder="Vul uw naam in" required>
+
+                        <?php if (!empty($errors['naam'])) : ?>
+                                <p class="form-error"><?php echo $errors['naam'] ?></p>
+                        <?php endif; ?>
+
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input id="email" type="email">
+                        <input type="email" id="email" name="email" placeholder="Vul uw emailadres in" required>
+                        
+                        <?php if (!empty($errors['email'])):?>
+                                <p class="form-error"><?php echo $errors['email']?></p>
+                        <?php endif;?>
                     </div>
                     <div>
                         <label for="vraag">vraag / opmerking</label>
-                        <textarea id="vraag" class="bigText"></textarea>
+                        <textarea id="vraag" class="bigText" name="bericht" id="bericht" placeholder="Vul uw vraag of opmerking in" required></textarea>
+
+                        <?php if (!empty($errors['bericht'])):?>
+                                <p class="form-error"><?php echo $errors['bericht']?></p>
+                        <?php endif;?>
+
                     </div>
                     <input class="submit" type="submit" value="Verzenden">
                 </form>
