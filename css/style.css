@@ -603,48 +603,6 @@ footer {
     padding: 0.5rem 1rem;
 }
 
-/* --- footerform --- */
-.footer__form{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    font-size: 1.5rem;
-    gap: 0.8rem;
-}
-
-.footer__form > div > label{
-    border-bottom: 1px solid grey;
-}
-
-.footer__form > div{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-}
-
-.footer__form > div > input{
-    display: block;
-    width: 30ch;
-    padding: 1rem 2rem;
-    background: #EEEEEE;
-}
-
-.footer__form > div > textarea{
-    height: 15ch;
-    padding: 1rem 2rem;
-    background: #EEEEEE;
-}
-.submit{
-    height: 3rem;
-    background: grey;
-    font-size: 1.45rem;
-    border: none;
-}
-
-.submit:hover{
-    cursor: pointer;
-}
-
 /* Reviews Keyframes en @media screen */
 @keyframes FadeIn{
     from{

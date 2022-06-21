@@ -4,55 +4,7 @@ $connection = dbConnect();
 
 $result = $connection->query('SELECT * FROM `games` LIMIT 4');
 
-$naam = '';
-$email = '';
-$bericht = '';
-
-
-//opslag variabele (array) voor errors
-$errors = [];
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    //gegevens opslaan
-    $naam = $_POST['naam'];
-    $email = $_POST['email'];
-    $bericht = $_POST['bericht'];
-    $tijdstip = date('Y-m-d H:i:s');
-
-
-    //fouten controleren / valideren van input
-    if (isEmpty($naam)) {
-        $errors['naam'] = 'Vul uw naam in aub.';
-    }
-    if (!isvalidEmail($email)) {
-        $errors['email'] = 'Dit is geen geldig email adres.';
-    }
-    if (!hasMinLength($bericht, 5)) {
-        $errors['bericht'] = 'vul minimaal 5 tekens in.';
-    }
-
-    //print_r($errors);
-
-    if (count($errors) == 0) {
-        $sql = "INSERT INTO `berichten` (`naam`, `email`, `bericht`, `tijdstip`) 
-            VALUES (:naam, :email, :bericht, :tijdstip);";
-        $statement = $connection->prepare($sql);
-        $params = [
-            'naam' => $naam,
-            'email' => $email,
-            'bericht' => $bericht,
-            'tijdstip' => $tijdstip
-        ];
-        $statement->execute($params);
-        
-        //stuur bezoeker door naar bedankt pagina
-        header('location: bedankt.php');
-        exit;
-    }
-}
-
 ?>
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -96,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         <div class="text-block">
                             <h3>€<?php echo $row['prijs'] ?></h3>
                         </div>
-                        <a href="game.php?id=<?php echo $row['id'] ?>">
+                        <a href="game.php?id=<?php echo $row['id'] ?>#gamesectie">
                             <img src="img/games/<?php echo $row['foto'] ?>" alt="<?php echo $row['afbeeldinginformatie'] ?>" class="product">
                         </a>
                     </li>
@@ -125,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
                     <li><a href="games.php#games">Games</a></li>
-                    <li><a href="contact.php#contact">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="zoeken.php">Zoeken</a></li>
                 </ul>
             </div>
@@ -146,37 +98,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </li>
                 </ul>
             </div>
-            <div action="contact.php" method="POST" novalidate class="footer__section">
-                <h3>Contact formulier</h3>
-                <form class="footer__form" novalidate>
-                    <div>
-                        <label for="naam">Naam</label>
-                        <input id="naam" type="text" name="naam" placeholder="Vul uw naam in" required>
-
-                        <?php if (!empty($errors['naam'])) : ?>
-                                <p class="form-error"><?php echo $errors['naam'] ?></p>
-                        <?php endif; ?>
-
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Vul uw emailadres in" required>
-                        
-                        <?php if (!empty($errors['email'])):?>
-                                <p class="form-error"><?php echo $errors['email']?></p>
-                        <?php endif;?>
-                    </div>
-                    <div>
-                        <label for="vraag">vraag / opmerking</label>
-                        <textarea id="vraag" class="bigText" name="bericht" id="bericht" placeholder="Vul uw vraag of opmerking in" required></textarea>
-
-                        <?php if (!empty($errors['bericht'])):?>
-                                <p class="form-error"><?php echo $errors['bericht']?></p>
-                        <?php endif;?>
-
-                    </div>
-                    <input class="submit" type="submit" value="Verzenden">
-                </form>
+            <div class="footer__section">
+            <h3>Social Media</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/sniperr2d2/">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCPv0jO_YixtmUQQsotMKGKw/videos">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/nick-van-der-tol-3465b0220/">Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/SniperR2D2">Twitter</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>

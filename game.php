@@ -56,7 +56,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
             </div>
         </section>
 
-        <section class="game">
+        <section class="game" id="gamesectie">
             <ul class="gamelijst">
                 <li class="gamelijstslider">
                     <div class="slideshow-container">
@@ -192,15 +192,15 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                 <ul>
                     <li>Contactweg 36</li>
                     <li>1014 AN Amsterdam</li>
-                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9739.458184559553!2d4.8560905!3d52.3910058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5dffd675d740eddb!2sMediacollege%20Amsterdam!5e0!3m2!1snl!2snl!4v1652688761811!5m2!1snl!2snl" width="350" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
-                </ul>
+                     <li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9739.458184559553!2d4.8560905!3d52.3910058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5dffd675d740eddb!2sMediacollege%20Amsterdam!5e0!3m2!1snl!2snl!4v1652688761811!5m2!1snl!2snl" width="350" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                </ul> 
             </div>
             <div class="footer__section">
                 <h3>Navigatie</h3>
                 <ul>
                     <li><a href="index.php">Homepage</a></li>
                     <li><a href="games.php#games">Games</a></li>
-                    <li><a href="contact.php#contact">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="zoeken.php">Zoeken</a></li>
                 </ul>
             </div>
@@ -222,22 +222,21 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                 </ul>
             </div>
             <div class="footer__section">
-                <h3>Contact formulier</h3>
-                <form class="footer__form">
-                    <div>
-                        <label for="naam">Naam</label>
-                        <input id="naam" type="text">
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="email">
-                    </div>
-                    <div>
-                        <label for="vraag">vraag / opmerking</label>
-                        <textarea id="vraag" class="bigText"></textarea>
-                    </div>
-                    <input class="submit" type="submit" value="Verzenden">
-                </form>
+            <h3>Social Media</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/sniperr2d2/">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCPv0jO_YixtmUQQsotMKGKw/videos">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/nick-van-der-tol-3465b0220/">Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/SniperR2D2">Twitter</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
