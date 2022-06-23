@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <section id="contact" class="contact">
             <ul class="contactlijst">
                 <li class="contactlijstitem">
-                    <img src="img/contactformulier.webp" alt="afbeelding van contactformulier">
+                    <img class="contactimg" src="img/contactformulier.webp" alt="afbeelding van contactformulier">
                 </li>
                 <li class="block">
                     <form action="contact.php" method="POST" novalidate>
@@ -111,6 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         <button type="submit" class="form__button">opsturen</button>
                     </form>
                 </li>
+            </ul>
         </section>
     </main>
 

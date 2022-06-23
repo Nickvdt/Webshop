@@ -26,7 +26,7 @@
 
     <main>
         <div class="bedanktContainer">
-            <img src="img/bedankt.webp" width="600rem" alt="Bedanktformulier afbeelding">
+            <img src="img/bedankt.webp" alt="Bedanktformulier afbeelding">
 
             <a href="/index.php">Klik hier om naar de homepage te gaan.</a>
         </div>
@@ -68,7 +68,23 @@
                     </li>
                 </ul>
             </div>
-
+            <div class="footer__section">
+            <h3>Social Media</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/sniperr2d2/">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCPv0jO_YixtmUQQsotMKGKw/videos">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/nick-van-der-tol-3465b0220/">Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/SniperR2D2">Twitter</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>

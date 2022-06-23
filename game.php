@@ -52,7 +52,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
         <section class="afbeelding">
             <div class="col-2">
                 <img src="img/1087325.webp" alt="Darthvader afbeelding" class="image1">
-                <img src="img/games/logos/<?php echo $games['logo']?>" alt="Logo van Battlefront 2" class="image2"> 
+                <img src="img/games/logos/<?php echo $games['logo']?>" alt="Logo van game" class="image2"> 
             </div>
         </section>
 
@@ -64,17 +64,17 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                         <!-- SLIDESHOW -->
                         <div class="mySlides fade">
                             <div class="numbertext">1 / 3</div>
-                            <img src="img/gameplay/<?php echo $games['gameplayfoto']?>_gameplay1.webp" style="width:100%">
+                            <img src="img/gameplay/<?php echo $games['gameplayfoto']?>_gameplay1.webp" alt="Gameplayfoto1 van <?php echo $games['titel'] ?>'" style="width:100%">
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">2 / 3</div>
-                            <img src="img/gameplay/<?php echo $games['gameplayfoto']?>_gameplay2.webp" style="width:100%">
+                            <img src="img/gameplay/<?php echo $games['gameplayfoto']?>_gameplay2.webp" alt="Gameplayfoto2 van <?php echo $games['titel'] ?>'" style="width:100%">
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">3 / 3</div>
-                            <img src="img/gameplay/<?php echo $games['gameplayfoto']?>_gameplay3.webp" style="width:100%">
+                            <img src="img/gameplay/<?php echo $games['gameplayfoto']?>_gameplay3.webp" alt="Gameplayfoto3 van <?php echo $games['titel'] ?>'" style="width:100%">
                         </div>
 
                         <!-- Volgende en vorige knoppen -->
@@ -102,12 +102,13 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                     <span>
                         €<?php echo $games['prijs'];?>
                     </span>
-                    <button class="glow-on-hover" type="button"><h2>Kopen</h2></button>
+                    <button class="glow-on-hover" type="button">Kopen</button>
                     
                 </li>
+            </ul>
         </section>
         <section class="section section--third">
-            <button class="arrow"><</button>
+            <button class="arrow">&#60;</button>
             <ul class="reviews">
                 <li class="review">
                     <figure class="quote">
@@ -181,7 +182,7 @@ $games = $statement->fetch(PDO::FETCH_ASSOC)
                     <p><?php echo $games['review6'];?></p>
                 </li>
             </ul>
-            <button class="arrow">></button>
+            <button class="arrow">&#62;</button>
         </section>
     </main>
 

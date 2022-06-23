@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoeken</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/spraak.js" defer></script>
 </head>
 
 <body>
@@ -26,12 +26,11 @@
 
     <main>
         <div class="spraakContainer">
-            <img src="img/zoeken.webp" width="600rem" alt="Star Wars Games Logo">
+            <img src="img/zoeken.webp" width="600" alt="Star Wars Games Logo">
             <h2>Speech to Text</h2>
             <h4 id="message">Press the button below, and start speaking</h4>
             <button class="spraakButton" onclick="startRecognition()">Speech to text</button>
             <div id="result" class="hide"></div>
-            <div><img id="image1" class="hide"></div>
         </div>
     </main>
     

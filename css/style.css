@@ -84,8 +84,8 @@ p{
 }
 .image2 {
     position: absolute;
-    top: 300px;
-    left: 100px;
+    top: 30rem;
+    left: 10rem;
     width: 50rem;
 }
 
@@ -166,8 +166,8 @@ span{ /* prijs */
 
 /* ------------Button style voor kopen------------ */
 .glow-on-hover {
-    width: 150px;
-    height: 45px;
+    width: 15rem;
+    height: 4.5rem;
     border: none;
     outline: none;
     color: #fff;
@@ -175,24 +175,24 @@ span{ /* prijs */
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 .glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
-    top: -2px;
-    left:-2px;
+    top: -0.2rem;
+    left:-0.2rem;
     background-size: 400%;
     z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
+    filter: blur(0.5rem);
+    width: calc(100% + 0.4rem);
+    height: calc(100% + 0.4rem);
     animation: glowing 20s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+    border-radius: 1rem;
     
 }
 
@@ -217,7 +217,7 @@ span{ /* prijs */
     background: linear-gradient(#2Fa4FF,#00FFDD);
     left: 0;
     top: 0;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 
@@ -230,13 +230,16 @@ span{ /* prijs */
     text-align: center;
     font-family: sans-serif;
 }
+.bedanktContainer > img{
+    width: 70rem;
+}
 .hide{
     display: none;
 }
 #result{
     margin-top: 2em;
     background: #EF476F;
-    border-radius: 10px;
+    border-radius: 1rem;
     padding: 2rem;
     color: #fff;
 }
@@ -244,7 +247,7 @@ span{ /* prijs */
     padding: 0.75rem;
     margin-top: 0.9rem;
     margin-bottom: 0.9rem;
-    border-radius: 10px;
+    border-radius: 1rem;
     background: linear-gradient(#2Fa4FF,#00FFDD);
     color: #fff;
     border: none;
@@ -544,6 +547,7 @@ footer {
   .footer__section > ul iframe{
       padding-top: 1rem;
   }
+
 /* ------------contactform------------ */
 
 
@@ -583,7 +587,7 @@ footer {
 
 .form__button {
     width: 40ch;
-    height: 3rem;
+    height: 4rem;
     background: linear-gradient(#2Fa4FF,#00FFDD);
     color: white;
     border-radius: 1rem;
@@ -603,11 +607,25 @@ footer {
     padding: 0.5rem 1rem;
 }
 
+
+/* algemene voorwaarden */
+
+.voorwaarden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30rem;
+    padding-right: 30rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
 /* Reviews Keyframes en @media screen */
 @keyframes FadeIn{
     from{
         opacity: 0;
-        filter: blur(10px);
+        filter: blur(1rem);
     }
     to{
         opacity: 1;
@@ -620,12 +638,21 @@ footer {
     to {opacity: 1}
 }
 
-@media screen and (max-width: 50rem){
+@media screen and (max-width: 50rem){  /* 500px */
     .arrow{
         display: none;
     }
     .reviews{
         width:100%;
+    }
+    .contactimg{
+        display: none;
+    }
+    .contactlijstitem{
+        display: none;
+    }
+    .bedanktContainer{
+        padding: 5rem;
     }
 }
 
@@ -671,5 +698,17 @@ footer {
     }
     .spraakContainer > img{
         width: 30rem;
+    }
+    .form__field textarea{
+        width: 40ch
+    }
+    .form__button, .spraakButton {
+        height: 5rem;
+    }
+    .bedanktContainer > img{
+        width: 30rem;
+    }
+    .gametitel{
+        display: none;
     }
 }

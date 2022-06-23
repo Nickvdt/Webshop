@@ -52,40 +52,40 @@ actionSpeech = (speechText) => {
       break;
     // Alle Games
     case "battlefront 2":
-      window.open("http://localhost/SWGames/webshop/game.php?id=1");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=1");
       break;
     case "battlefront":
-      window.open("http://localhost/SWGames/webshop/game.php?id=2");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=2");
       break;
     case "battlefront 2004":
-      window.open("http://localhost/SWGames/webshop/game.php?id=3");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=3");
       break;
     case "battlefront 2 2005":
-      window.open("http://localhost/SWGames/webshop/game.php?id=4");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=4");
       break;
     case "Jedi Fallen Order":
-      window.open("http://localhost/SWGames/webshop/game.php?id=5");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=5");
       break;
     case "Skywalker saga":
-      window.open("http://localhost/SWGames/webshop/game.php?id=6");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=6");
       break;
     case "Squadrons":
-      window.open("http://localhost/SWGames/webshop/game.php?id=7");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=7");
       break;
     case "Force Unleashed":
-      window.open("http://localhost/SWGames/webshop/game.php?id=8");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=8");
       break;
     case "Force Unleashed 2":
-      window.open("http://localhost/SWGames/webshop/game.php?id=9");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=9");
       break;
     case "Knights of the Old Republic":
-      window.open("http://localhost/SWGames/webshop/game.php?id=10");
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=10");
       break;
     case "The Clone Wars":
-      window.open("http://localhost/SWGames/webshop/game.php?id=11")
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=11")
       break;
     case "Jedi Knight":
-      window.open("http://localhost/SWGames/webshop/game.php?id=12")
+      window.open("https://32934.hosts1.ma-cloud.nl/makeitrain/game.php?id=12")
       break;
 
     case "help me":
