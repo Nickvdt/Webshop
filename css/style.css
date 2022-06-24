@@ -672,6 +672,9 @@ footer {
     textarea{
         width: 60vw;
     }
+    nav{
+        padding-right: 0rem;
+    }
 }
 
 @media screen and (max-width: 74rem) { /* 740px */
@@ -692,7 +695,6 @@ footer {
     .inputs{
         padding-top: 5rem;
     }
-
     .spraakContainer{
         padding: 5rem;
     }
@@ -710,5 +712,8 @@ footer {
     }
     .gametitel{
         display: none;
+    }
+    .voorwaarden{
+        padding: 5rem;
     }
 }

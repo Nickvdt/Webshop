@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Op deze pagina kunt u contact opnemen met de klantenservice van SW Games">
     <title>Contactpagina</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
