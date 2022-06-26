@@ -1,5 +1,5 @@
 ![Logo van SW Games](img/SWGames%20Zwarte%20versie.png)
-# Webshop naam: SW Games 
+# Webshop: SW Games 
 ### Gemaakt door: Nick van der Tol
 ### Klas: SD1D
 
@@ -8,6 +8,8 @@
 - Product/dienst: Mensen kunnen in 1 oog opslag Star Wars games downloaden en zijn niet verplicht om services zoals Steam of Origin te downloaden.
 
 Klik [hier](https://trello.com/b/LaqFOvgb/backlog-periode-4-webshop) voor de trello link.
+
+Klik [hier](http://32934.hosts1.ma-cloud.nl/makeitrain/) voor de live versie van de website op ma-cloud.
 
 Wireframe screenshot:
 ![Screenshot van Wireframe](img/Screenshot%20wireframe.png)
